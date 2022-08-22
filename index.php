@@ -92,17 +92,17 @@ include('./class/cliente.php');
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form class ="row g-3" action="./function/registrar.php">
+                          <form class ="row g-3" action="./function/registrar.php" method="POST">
                             <div class="col-12">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text"  name="Usuario">
+                                <input type="text"  name="nombre">
                             </div>
                             <div class="col-12">
                                 <label for="apellido1">Apelido Paterno:</label>
                                 <input type="text"  name="apellido">
                             </div>
                             <div class="col-12">
-                                <label for="apellido2">Apellido Paterno:</label>
+                                <label for="apellido2">Apellido Materno:</label>
                                 <input type="text"  name="apellido2">
                             </div>
                             <div class="col-12">
