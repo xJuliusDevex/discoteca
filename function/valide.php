@@ -11,7 +11,7 @@
             {   
                 $email=$_POST['email'];
                 $password=$_POST['password']; 
-                $conex=mysqli_connect('r98du2bxwqkq3shg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	','bjizp31qtm0tnlmi',"itn1a5shytadu8mb",'u3tq9e016g79oekb');
+                $conex=mysqli_connect('r98du2bxwqkq3shg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com','bjizp31qtm0tnlmi',"itn1a5shytadu8mb",'u3tq9e016g79oekb');
                 if($conex)
                 {
                     $consulta="SELECT * FROM cliente WHERE email='$email' && pass='$password'";
