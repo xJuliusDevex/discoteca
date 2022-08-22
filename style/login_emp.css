@@ -1,0 +1,83 @@
+body{
+    background-image: url("/PROYECTO/img/portada/fondo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: absolute;
+    
+}
+.formulario{
+    background:rgba(255, 255, 255, 0.274);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px solid;
+    box-shadow:0 0 30px rgba(0, 0, 0, -0.568);
+    color: white;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.form-control{
+    background-color: rgba(0, 0, 0, -0.3);
+    border-style:none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+}
+.form-control:focus{
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+.form-control::placeholder{
+    color:white;
+}
+.ingresar{
+    background: #222a3f;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color:white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, -0.568);
+}
+.ingresar:hover{
+    color:white
+}
+
+.olvide{
+    padding: 30px;
+    color:white;
+    text-decoration-style: none;
+    text-decoration-line:none;
+}
+.olvide:hover{
+    color:white;
+    text-decoration-style: none;
+    text-decoration-line:none;
+    cursor: pointer;
+}
+.perfil{
+    width: 250px;;
+    height: 250px;
+    
+}
+.entrar{
+    margin-left: 12px;
+}
+@media screen and (max-width: 690px) {
+    .perfil {
+        width: 150px;
+        height: 150px;
+    }
+  }
+label
+{
+    font-size:30px;
+}
+.error
+{
+    color: red;
+    
+}
