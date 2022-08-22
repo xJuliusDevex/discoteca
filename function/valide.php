@@ -4,7 +4,7 @@
     {
         if(isset($_SESSION['id_cliente']))
         {
-            header("Location: ./index.php");
+            header("Location: ../index.php");
         }
         else{
             if(isset($_POST))
@@ -22,12 +22,12 @@
                         $date=$resultado->fetch_assoc();
                         $id_cliente=$date['id_cliente'];
                         $_SESSION['id_cliente']=$id_cliente;
-                        header("Location: ./index.php");
+                        header("Location: ../index.php");
                     }
                     else{
                         /*Cuando no encontro nada  */
                         $_SESSION['Notificacion']="fallo";
-                        header("Location: ./index.php");
+                        header("Location: ../index.php");
                     }
                 }
             }
