@@ -18,7 +18,8 @@ session_start();
                 $apellido2=$_POST['apellido2'];
                 
                 if($_POST['contra1']==$_POST['contra']){
-                    $conex=mysqli_connect('localhost','root',"",'discoteca');
+                    $conex=mysqli_connect('r98du2bxwqkq3shg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	','bjizp31qtm0tnlmi',"itn1a5shytadu8mb",'u3tq9e016g79oekb');
+
                     if($conex)
                     {
                         $consulta="SELECT * FROM cliente WHERE email='$email'";

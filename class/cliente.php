@@ -8,7 +8,8 @@
       var $password;
 
       function iniciarseccion(string $_id){
-        $conex=mysqli_connect('localhost','root',"",'discoteca');
+        $conex=mysqli_connect('r98du2bxwqkq3shg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	','bjizp31qtm0tnlmi',"itn1a5shytadu8mb",'u3tq9e016g79oekb');
+
         if($conex)
             {
                 $consulta="SELECT * FROM cliente WHERE id_cliente='$_id'";
@@ -30,5 +31,15 @@
         function set_nombre(){
             return $this->nombre;
         }
+        function set_apellido(){
+            return "$this->apellido1 $this->apellido2";
+        }
+        function set_email(){
+            return $this->email;
+        }
+        function set_password(){
+            return $this->password;
+        }
+
     }
 ?>

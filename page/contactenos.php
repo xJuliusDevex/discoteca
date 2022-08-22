@@ -37,7 +37,7 @@ include('../class/cliente.php');
                 <?php if(isset($_SESSION['id_cliente'])): ?>
                 <li class="col"><a class="deco" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large"></i> <?php echo $cliente->set_nombre();?></a>
                 <ul class="dropdown-menu row nav_ul">
-                    <li><a class="dropdown-item " href="#">Mi perfil</a></li>
+                <li><a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target="#miperfil">Mi perfil</a></li>
                     <li><a class="dropdown-item " href="../function/cerrar_session.php">cerrar seccion</a></li>
 
                 </ul>
@@ -110,6 +110,41 @@ include('../class/cliente.php');
                 </div>
             </section>
         </section>
+        <?php
+    if(isset($_SESSION['id_cliente'])): ?>
+    <div class="modal" tabindex="-1" id="miperfil" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title align-content-center">Mi perfil</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form class ="row g-3">
+                            <div class="col ">
+                                <label for="Usuario">Correo:</label>
+                                <input type="email"  value="<?php echo $cliente->set_email();?>">
+                            </div>
+                            <div class= "col">
+                                <label for="Password">Contraseña:</label>
+                                <input type="password"value="<?php echo $cliente->set_password();?> ">
+                            </div>
+                            <div>
+                                <label for="nombre">Nombre:</label>
+                                <input type="text"value="<?php echo $cliente->set_nombre();?> ">
+                            </div>
+                            <div>
+                                <label for="Password">Apellidos:</label>
+                                <input type="text"value="<?php echo $cliente->set_apellido();?> ">
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success text-center" data-bs-dismiss="modal">Salir</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <?php endif; ?>
     </main>
 </div>
 </body>
