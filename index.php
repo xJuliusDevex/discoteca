@@ -92,15 +92,33 @@ include('./class/cliente.php');
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form class ="row g-3" action="">
+                          <form class ="row g-3" action="./function/registrar.php">
+                            <div class="col-12">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text"  name="Usuario">
+                            </div>
+                            <div class="col-12">
+                                <label for="apellido1">Apelido Paterno:</label>
+                                <input type="text"  name="apellido">
+                            </div>
+                            <div class="col-12">
+                                <label for="apellido2">Apellido Paterno:</label>
+                                <input type="text"  name="apellido2">
+                            </div>
                             <div class="col-12">
                                 <label for="Usuario">correo:</label>
-                                <input type="email" placeholder="example@gmail.com" name="Usuario">
+                                <input type="email" placeholder="example@gmail.com" name="usuario">
                             </div>
+
                             <div>
-                                <label for="Password">contraseña:</label>
+                                <label for="contra">Contraseña:</label>
                                 <input type="password" placeholder="***********" name="contra">
                             </div>
+                            <div>
+                                <label for="contra1">Contraseña:</label>
+                                <input type="password" placeholder="***********" name="contra1">
+                            </div>
+                            
                             <div>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-secondary">Entrar</button>

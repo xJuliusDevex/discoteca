@@ -61,8 +61,6 @@ include('../class/cliente.php');
                 </form>
             </div></div>
             
-        
-        
     </div>
     </section>
    </main>
