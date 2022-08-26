@@ -8,7 +8,6 @@ include('../class/cliente.php');
     $cliente=new cliente();
     $cliente->iniciarseccion($_SESSION['id_cliente']);
   }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
