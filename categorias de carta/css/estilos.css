@@ -1,0 +1,285 @@
+* {
+	box-sizing: border-box;
+}
+	
+body {
+	background-image: url("/img/fondo-gigapixel-scale-2_00x.jpg");
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	/*min-height: 100vh;*/
+	display: flex;
+	align-items: center;
+	background-size: cover;
+	
+}
+
+.contenedor_general {
+	max-width: 1200px;
+	width: 90%;
+	margin: auto;
+}
+
+.titulo_carta, .titulo_categorias{
+	font-family: 'Rubik Dirt', cursive;
+	letter-spacing: 10px;
+	
+}
+.titulo_carta p{
+	font-size: 50px;
+	margin-bottom: 0px;
+}
+
+.titulo_categorias p{
+	font-size: 50px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+/* --- --- CONTENEDOR PRINCIPAL --- --- 
+
+.contenido-principal {
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.contenido-principal__imagen {
+	vertical-align: top;
+	margin-right: 20px;
+	width: 50%;
+	max-width: 550px;
+}
+
+.contenido-principal__contenedor {
+	width: 50%;
+}
+
+.contenido-principal__titulo {
+	font-weight: normal;
+	font-size: 28px;
+}
+
+.contenido-principal__resumen {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+	color: #CFCFCF;
+}*/
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -80px;
+}
+
+.carousel__siguiente {
+	right: -80px;
+}
+
+.carousel__lista {
+	overflow: hidden;
+	
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+	
+
+	.carousel__elemento{
+		width: 90%;
+		
+		
+	}
+	.carousel__anterior {
+		left: -30px;
+	}
+	
+	.carousel__siguiente {
+		right: -30px;
+	}
+	.carousel__anterior,
+	.carousel__siguiente {
+		position: absolute;
+		display: block;
+		width: 30px;
+		height: 30px;
+		border: none;
+		top: calc(50% - 35px);
+		cursor: pointer;
+		line-height: 30px;
+		text-align: center;
+		background: none;
+		color: #fff;
+		opacity: 20%;
+	}
+	
+
+
+
+}
+.carousel__elemento p {
+	text-decoration: underline;
+
+}
+
+
+/*------------------*/
+
+.titulo_carta, .titulo_categorias{
+    color: red;
+    font-size: larger;
+    font-style: normal;
+}
+
+.botones_categorias{
+
+	
+	
+	background-color: transparent;
+	
+    display: grid;
+    
+	/*
+    justify-content: center;
+	gap: 0;*/
+
+	column-gap: 0px;
+	row-gap: 0px;
+
+    grid-template-areas: 
+    "btn_cocteles_grid btn_selladas_grid btn_cervezas_grid btn_jarras_grid btn_otros_grid";
+
+    grid-template: 
+    "btn_cocteles_grid btn_selladas_grid btn_cervezas_grid btn_jarras_grid btn_otros_grid" 50px / 
+    150px 150px 150px 150px 150px;
+
+	position: relative;
+
+	justify-content: center;
+	
+}
+
+
+.btn_cocteles, .btn_selladas, .btn_cervezas, .btn_jarras, .btn_otros{
+	
+	font-family: 'DynaPuff', cursive;
+	font-size: x-large;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 5px;
+
+	position: absolute;
+
+	
+
+	height: 100%;
+	width: 100%;
+
+	background-color: #F4F97E;
+	
+
+}
+
+.btn_cocteles:hover{
+    background-color: #043;
+    color:cornsilk;
+}
+.btn_selladas:hover{
+    background-color: #043;
+    color:cornsilk;
+}
+.btn_cervezas:hover{
+    background-color: #043;
+    color:cornsilk;
+}
+.btn_jarras:hover{
+    background-color: #043;
+    color:cornsilk;
+}
+.btn_otros:hover{
+    background-color: #043;
+    color:cornsilk;
+}
+
+
+.btn_cocteles{
+    grid-area: btn_cocteles_grid;
+}
+.btn_selladas{
+    grid-area: btn_selladas_grid;
+}
+.btn_cervezas{
+    grid-area: btn_cervezas_grid;
+}
+.btn_jarras{
+    grid-area: btn_jarras_grid;
+}
+.btn_otros{
+	grid-area: btn_otros_grid;
+}
+
+
+.carousel__elemento p {
+	color: aquamarine;
+	font-size: 25px;
+}
+
+
+@media all and (max-width:900px)
+{
+	.botones_categorias{
+		grid-template: 
+		"btn_cocteles_grid btn_selladas_grid" 50px
+		"btn_cervezas_grid btn_jarras_grid" 50px 
+		"btn_otros_grid btn_otros_grid" 50px/ 
+		150px 150px;
+
+		justify-content: center;
+
+		gap: 0;
+	}    
+    
+}
